@@ -15,7 +15,7 @@ const MenuPage = () => {
   }));
 
   return (
-    <main className="pt-20">
+    <main>
       {/* Hero Section */}
       <section className="bg-[#ECEC75] py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -26,11 +26,11 @@ const MenuPage = () => {
             className="text-5xl lg:text-6xl font-bold text-[#0f172a] mb-6"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Our Menu
+            Sample Menu
           </h1>
           <p className="text-xl text-[#0f172a]/80 max-w-2xl mx-auto">
-            Each dish is thoughtfully crafted using the finest seasonal ingredients, 
-            bringing together tradition and innovation on every plate.
+            Illustrative dishes and prices in USD for this fictional restaurant.
+            Nothing on this menu is available to order.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ const MenuPage = () => {
       {/* Category Filter */}
       <section className="bg-white sticky top-20 z-40 border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center overflow-x-auto py-4 gap-2 sm:gap-4">
+          <div className="flex items-center justify-start md:justify-center overflow-x-auto py-4 gap-2 sm:gap-4">
             <button
               onClick={() => setActiveCategory('all')}
               className={`px-6 py-2.5 rounded-md font-medium transition-all duration-200 whitespace-nowrap ${
@@ -110,11 +110,11 @@ const MenuPage = () => {
             className="text-2xl font-bold text-[#0f172a] mb-4"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Dietary Information
+            Sample Dietary Labels
           </h3>
           <p className="text-[#0f172a]/80 mb-6">
-            Please inform your server of any allergies or dietary requirements. 
-            Our kitchen is happy to accommodate special requests whenever possible.
+            Dietary and signature labels demonstrate the design only.
+            They are fictional and are not verified food or allergy information.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="flex items-center text-[#0f172a]">

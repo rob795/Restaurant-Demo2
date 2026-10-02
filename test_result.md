@@ -101,3 +101,39 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+user_problem_statement: "Prepare the existing restaurant design demo for honest prospect demonstrations without enabling reservations or changing the website offer."
+frontend:
+  - task: "Clearly label fictional content and disable reservation data entry"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/ContactPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Added a global demo and package-scope notice, removed fake contact links and submission behavior, disabled all reservation controls, labeled fictional credibility and menu content. Added regression tests. Dependency installation and browser QA are in progress."
+      - working: true
+        agent: "main"
+        comment: "2026-10-02: 7/7 regression tests passed; production build compiled successfully with CI=true; changed-file React App ESLint check passed on 10 files with zero errors and warnings; git diff --check passed. Independent review found no blocking safety issue. Menu filtering remains left-aligned below 768px. Original brand and all menu prices are unchanged."
+      - working: "NA"
+        agent: "main"
+        comment: "Pre-merge browser visual QA is not verified. Local Chromium cannot open Unix sockets in the available shell, cloud browser local URLs are blocked, and the Vercel branch preview requires login. Production UI checks will follow publication. The pre-existing frozen-lockfile mismatch remains unchanged; installation with --pure-lockfile and Vercel preview build passed."
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 2
+  run_ui: true
+test_plan:
+  current_focus:
+    - "Disabled reservation preview and absence of false success messages"
+    - "Fictional content, contact destination and offer-scope clarity"
+    - "Navigation, repeated menu filtering, mobile and desktop layout"
+  stuck_tasks:
+    - "Pre-merge visual QA is blocked by preview authentication and local browser restrictions"
+  test_all: true
+  test_priority: "high_first"
+agent_communication:
+  - agent: "main"
+    message: "Safety review and automated checks passed. Check the public production UI after the authorized merge and Vercel publication. No unverified mobile-ready claim is made."

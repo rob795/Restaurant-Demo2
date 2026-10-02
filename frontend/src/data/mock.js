@@ -1,16 +1,16 @@
-// Mock data for restaurant website
+// Fictional sample data for an illustrative design demo. No contact destinations are connected.
 
 export const restaurantInfo = {
   name: "La Maison Verte",
   tagline: "Farm-to-Table Excellence",
   description: "Experience the finest culinary journey with locally sourced ingredients and timeless recipes that celebrate the art of fine dining.",
-  phone: "(555) 123-4567",
-  email: "hello@lamaisonverte.com",
+  phone: "Sample phone number",
+  email: "hello@example.com",
   address: {
-    street: "123 Garden Avenue",
-    city: "San Francisco",
-    state: "CA",
-    zip: "94102"
+    street: "Sample street address",
+    city: "Sample city",
+    state: "Region",
+    zip: "Postal code"
   },
   hours: [
     { day: "Monday", time: "Closed" },
@@ -20,12 +20,7 @@ export const restaurantInfo = {
     { day: "Friday", time: "5:00 PM - 11:00 PM" },
     { day: "Saturday", time: "12:00 PM - 11:00 PM" },
     { day: "Sunday", time: "12:00 PM - 9:00 PM" }
-  ],
-  socialLinks: {
-    instagram: "#",
-    facebook: "#",
-    twitter: "#"
-  }
+  ]
 };
 
 export const menuCategories = [
