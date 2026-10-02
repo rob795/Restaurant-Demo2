@@ -101,3 +101,32 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+user_problem_statement: "Prepare the existing restaurant design demo for honest prospect demonstrations without enabling reservations or changing the website offer."
+frontend:
+  - task: "Clearly label fictional content and disable reservation data entry"
+    implemented: true
+    working: "NA"
+    file: "frontend/src/pages/ContactPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Added a global demo and package-scope notice, removed fake contact links and submission behavior, disabled all reservation controls, labeled fictional credibility and menu content. Added regression tests. Dependency installation and browser QA are in progress."
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+test_plan:
+  current_focus:
+    - "Disabled reservation preview and absence of false success messages"
+    - "Fictional content, contact destination and offer-scope clarity"
+    - "Navigation, repeated menu filtering, mobile and desktop layout"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+agent_communication:
+  - agent: "main"
+    message: "Review the narrow cleanup for safety and regressions. No merge or production deployment is authorized."

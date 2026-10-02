@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { restaurantInfo } from '../../data/mock';
 
 const Footer = () => {
@@ -21,29 +21,7 @@ const Footer = () => {
             <p className="text-gray-400 leading-relaxed mb-6">
               {restaurantInfo.description}
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href={restaurantInfo.socialLinks.instagram}
-                className="p-2 bg-white/10 rounded-full hover:bg-[#ECEC75] hover:text-[#0f172a] transition-all duration-200"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href={restaurantInfo.socialLinks.facebook}
-                className="p-2 bg-white/10 rounded-full hover:bg-[#ECEC75] hover:text-[#0f172a] transition-all duration-200"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href={restaurantInfo.socialLinks.twitter}
-                className="p-2 bg-white/10 rounded-full hover:bg-[#ECEC75] hover:text-[#0f172a] transition-all duration-200"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-            </div>
+            <p className="text-sm text-gray-400">Fictional restaurant. Social profiles are not connected in this demo.</p>
           </div>
 
           {/* Quick Links */}
@@ -57,14 +35,14 @@ const Footer = () => {
                 Our Menu
               </Link>
               <Link to="/contact" className="text-gray-400 hover:text-[#ECEC75] transition-colors">
-                Contact Us
+                Contact Demo
               </Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">Sample Contact Details</h4>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin size={20} className="text-[#ECEC75] mr-3 mt-1 flex-shrink-0" />
@@ -75,21 +53,15 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Phone size={20} className="text-[#ECEC75] mr-3 flex-shrink-0" />
-                <a 
-                  href={`tel:${restaurantInfo.phone}`}
-                  className="text-gray-400 hover:text-[#ECEC75] transition-colors"
-                >
+                <span className="text-gray-400 break-words">
                   {restaurantInfo.phone}
-                </a>
+                </span>
               </div>
               <div className="flex items-center">
                 <Mail size={20} className="text-[#ECEC75] mr-3 flex-shrink-0" />
-                <a 
-                  href={`mailto:${restaurantInfo.email}`}
-                  className="text-gray-400 hover:text-[#ECEC75] transition-colors"
-                >
+                <span className="text-gray-400 break-words">
                   {restaurantInfo.email}
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -98,7 +70,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 flex items-center">
               <Clock size={20} className="text-[#ECEC75] mr-2" />
-              Hours
+              Sample Hours
             </h4>
             <div className="space-y-2">
               {restaurantInfo.hours.map((item) => (
@@ -115,7 +87,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-          <p>&copy; {currentYear} {restaurantInfo.name}. All rights reserved.</p>
+          <p>&copy; {currentYear} {restaurantInfo.name}. Fictional restaurant design demo.</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-[#ECEC75]">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-0 w-1/2 h-full hidden lg:block">
+          <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
             <img
               src={featuredImages.hero}
               alt="Fine dining"
@@ -21,7 +21,7 @@ const HomePage = () => {
           </div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-2xl">
             <p className="text-[#0f172a]/70 font-medium mb-4 tracking-wide uppercase">
               Welcome to
@@ -47,14 +47,14 @@ const HomePage = () => {
                 to="/contact"
                 className="inline-flex items-center justify-center border-2 border-[#0f172a] text-[#0f172a] px-8 py-4 rounded-md font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-200"
               >
-                Make a Reservation
+                View Contact Demo
               </Link>
             </div>
           </div>
         </div>
 
         {/* Mobile Hero Image */}
-        <div className="lg:hidden absolute bottom-0 left-0 right-0 h-64">
+        <div className="lg:hidden pointer-events-none absolute bottom-0 left-0 right-0 h-64">
           <img
             src={featuredImages.hero}
             alt="Fine dining"
@@ -81,8 +81,8 @@ const HomePage = () => {
               },
               {
                 icon: Award,
-                title: 'Award Winning',
-                description: 'Recognized for excellence in fine dining'
+                title: 'Sample Recognition',
+                description: 'Illustrative award placement, not a real award'
               }
             ].map((feature, index) => (
               <div 
@@ -111,7 +111,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#0f172a]/70 font-medium mb-4 tracking-wide uppercase">
-                Our Story
+                A Fictional Story
               </p>
               <h2 
                 className="text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6"
@@ -120,13 +120,12 @@ const HomePage = () => {
                 A Tradition of Excellence
               </h2>
               <p className="text-lg text-[#0f172a]/80 mb-6 leading-relaxed">
-                Since 2010, La Maison Verte has been a destination for those who appreciate 
-                the finer things in life. Our commitment to quality, sustainability, and 
-                exceptional service has made us a beloved fixture in the community.
+                La Maison Verte is an imagined farm-to-table restaurant, created to show how
+                a warm visual identity and a thoughtful layout can tell a business story.
               </p>
               <p className="text-lg text-[#0f172a]/80 mb-8 leading-relaxed">
-                Every dish we serve tells a story of passion, tradition, and innovation. 
-                We invite you to join us and experience the magic of true farm-to-table dining.
+                The restaurant, its history, dishes and guest quotes are fictional sample content.
+                The photography is illustrative and does not depict this business.
               </p>
               <Link
                 to="/contact"
@@ -142,9 +141,9 @@ const HomePage = () => {
                 alt="Restaurant interior"
                 className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-[#0f172a] text-white p-6 rounded-xl shadow-xl">
-                <p className="text-3xl font-bold" style={{ fontFamily: "'Crimson Text', serif" }}>15+</p>
-                <p className="text-sm text-gray-300">Years of Excellence</p>
+              <div className="absolute -bottom-6 left-4 lg:-left-6 bg-[#0f172a] text-white p-6 rounded-xl shadow-xl">
+                <p className="text-3xl font-bold" style={{ fontFamily: "'Crimson Text', serif" }}>Design Demo</p>
+                <p className="text-sm text-gray-300">Fictional Restaurant</p>
               </div>
             </div>
           </div>
@@ -165,7 +164,7 @@ const HomePage = () => {
               Signature Dishes
             </h2>
             <p className="text-lg text-[#64748b] max-w-2xl mx-auto">
-              Discover our chef's most celebrated creations, each crafted with care and passion.
+              Sample dishes and illustrative prices in USD. These items are not available to order.
             </p>
           </div>
           
@@ -213,13 +212,13 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-[#ECEC75] font-medium mb-4 tracking-wide uppercase">
-              What Our Guests Say
+              Sample Testimonials
             </p>
             <h2 
               className="text-4xl lg:text-5xl font-bold text-white mb-4"
               style={{ fontFamily: "'Crimson Text', serif" }}
             >
-              Guest Experiences
+              Illustrative Guest Experiences
             </h2>
           </div>
           
@@ -229,6 +228,7 @@ const HomePage = () => {
                 key={testimonial.id}
                 className="bg-white/5 backdrop-blur p-8 rounded-xl border border-white/10"
               >
+                <p className="text-sm text-[#ECEC75] mb-3">Fictional testimonial</p>
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} size={20} className="text-[#ECEC75] fill-[#ECEC75]" />
@@ -251,16 +251,16 @@ const HomePage = () => {
             className="text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6"
             style={{ fontFamily: "'Crimson Text', serif" }}
           >
-            Ready to Experience Fine Dining?
+            Explore the Contact Page Design
           </h2>
           <p className="text-xl text-[#0f172a]/80 mb-8">
-            Join us for an unforgettable culinary journey. Reserve your table today.
+            See the sample contact details and disabled reservation layout. No real bookings are accepted.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center bg-[#0f172a] text-white px-10 py-4 rounded-md font-semibold hover:bg-[#1e293b] transition-all duration-200 hover:-translate-y-0.5 shadow-lg text-lg"
           >
-            Make a Reservation
+            View Contact Demo
             <ArrowRight size={24} className="ml-2" />
           </Link>
         </div>
